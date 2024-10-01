@@ -1,4 +1,4 @@
-Dijkstra-algorithm is a method for finding the shortest paths from a start node to all other nodes in a graph.
+Dijkstra-algorithm is a method for finding the shortest paths from a start node to all other nodes in a weighted graph.
 
 Step.1:  Start by initializing the distance to the startnode as 0 and all other nodes as ∞.
 Step.2: Maintain a set of visited nodes, initially empty.
