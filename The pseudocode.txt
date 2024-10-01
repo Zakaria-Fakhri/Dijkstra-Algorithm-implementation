@@ -1,0 +1,30 @@
+Implementation of Dijkstra´s Algorithm
+
+// Initialization
+distance[s] = 0  // Start node s has a distance of 0
+For each node v in V:
+    If v != s:
+        distance[v] = infinity  // All other nodes initially have infinity 
+
+predecessor[v] = []  // Empty array for each node to store predecessors
+
+queue = priority queue  // Initialize the priority queue
+queue.push(s, 0)  // Add the start node s with distance 0 into the queue
+
+
+While queue is not empty:
+    w = queue.pop()  // Remove the node w with the smallest distance from the queue
+
+ 
+    For each successor u in adj[w]:
+        c = distance[w] + length(w, u)  // Calculate the new distance through w
+
+        
+        If distance[u] > c:
+            distance[u] = c  // Set the new shortest distance to u
+            predecessor[u] = [w]  // Overwrite the predecessor of u with w
+            queue.push(u, c)  // Add u with the new distance into the queue
+
+        
+        Else if distance[u] == c:
+            predecessor[u].append(w)  // Add w to the predecessors of u
